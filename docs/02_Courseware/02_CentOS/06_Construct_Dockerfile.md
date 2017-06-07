@@ -5,16 +5,17 @@ Based on most of the previous steps, we are ready to build our Dockerfile.  We w
 In preparation of writing our Dockerfile, let's review all the steps we've performed up to this point.
 
   1. Install the latest version of CentOS
-  2. Update the package references
-  3. Install the latest packages
-  4. Install and configure Docker
+  2. Install the latest packages
+  3. Install and configure Docker
+  4. Add a reference to EPEL
   5. Install Node.js
   6. Install Node Package Manager (NPM)
-  7. Download (clone) the sample website
-  8. Download website dependencies
-  9. Run the web server
+  7. Install Git
+  8. Download (clone) the sample website
+  9. Download website dependencies
+  10. Run the web server
 
-As a reminder, since we are constructing an image, we can **ignore** step 4.  We won't need Docker installed inside of the image.
+As a reminder, since we are constructing an image, we can **ignore** step 3.  We won't need Docker installed inside of the image.
 
 ## Create the Dockerfile
 Let's go ahead and create the Dockerfile contents.  We'll then examine each line below.
