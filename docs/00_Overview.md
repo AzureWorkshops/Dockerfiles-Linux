@@ -1,4 +1,3 @@
-# Docker Automation with Dockerfiles (Linux)
 This workshop will show you how to automate the building and configuring of a Linux-based Docker image by utilizing Dockerfiles.  You will construct a Dockerfile by mimicking a production environment configuration. You'll also learn some of the options for a Dockerfile configuration.
 
 **Time Estimate:** 45 minutes
