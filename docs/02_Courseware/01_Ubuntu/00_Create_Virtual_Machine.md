@@ -25,7 +25,7 @@ In order to create resources, we need a _Resource Group_ to place them in.
 ## Create a Virtual Machine
 Now that we have an available resource group, let's create the actual Ubuntu server.
 
-  1. If you are not there already, go ahead and navigate to the **azworkshops_docker_ubuntu_demo** resource group.
+  1. If you are not there already, go ahead and navigate to the **azworkshops_dockerfile_ubuntu_demo** resource group.
 
   2. At the top of the blade for our group, click on **Add** <img src="https://raw.githubusercontent.com/AzureWorkshops/images/master/icons_add.jpg" style="display: inline; margin:0px 5px;box-shadow: 2px 2px 2px #999;border:1px solid #ccc;"/>. This will display the blade for the _Azure Marketplace_ allowing you to deploy a number of different solutions.
 
