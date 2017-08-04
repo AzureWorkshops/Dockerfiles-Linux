@@ -7,7 +7,7 @@ Just like any other operating system, updates are periodically released to suppo
   1. If you have not already, connect to your remote Ubuntu server and login.
 
   2. From the login prompt, you may see a status of available updates. (If not, don't be too alarmed - continue with these steps anyway just to be sure.)  
-  <img src="../../images/ubuntu_updates.jpg" style="margin:10px 0px;box-shadow: 2px 2px 2px #999;border:1px solid #ccc;"/>
+  <img src="../../images/ubuntu_updates.jpg" class="block"/>
 
   3. First we need to ensure our list of sources for our system updates are up-to-date. From the command prompt, type the following:
   ```bash

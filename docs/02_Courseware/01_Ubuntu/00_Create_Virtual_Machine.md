@@ -4,9 +4,9 @@ All of our work in this workshop, with the exception of the small Azure configur
 ## Create a Resource Group
 In order to create resources, we need a _Resource Group_ to place them in.
 
-1. If you are not there already, go ahead and click on the **Resource Groups** <img src="https://raw.githubusercontent.com/AzureWorkshops/images/master/icons_resource_groups.jpg" style="display: inline; margin:0px 5px;box-shadow: 2px 2px 2px #999;border:1px solid #ccc;"/> in the Azure Portal to open the Resource Groups blade.
+1. If you are not there already, go ahead and click on the **Resource Groups** <img src="https://raw.githubusercontent.com/AzureWorkshops/images/master/icons_resource_groups.jpg" class="inline"/> in the Azure Portal to open the Resource Groups blade.
 
-  2. At the top of the Resource Groups blade, click on **Add** <img src="https://raw.githubusercontent.com/AzureWorkshops/images/master/icons_add.jpg" style="display: inline; margin:0px 5px;box-shadow: 2px 2px 2px #999;border:1px solid #ccc;"/>. This will open a panel that asks for some basic configuration settings.
+  2. At the top of the Resource Groups blade, click on **Add** <img src="https://raw.githubusercontent.com/AzureWorkshops/images/master/icons_add.jpg" class="inline"/>. This will open a panel that asks for some basic configuration settings.
 
   3. Complete the configuration settings with the following:
 
@@ -18,7 +18,7 @@ In order to create resources, we need a _Resource Group_ to place them in.
 
   5. Click **Create**.
 
-  6. It should only take a second for the resource group to be created.  Once you click create, the configuration panel closes and returns you to the list of available resource groups.  Your recently created group may not be visible in the list.  Clicking on **Refresh** <img src="https://raw.githubusercontent.com/AzureWorkshops/images/master/icons_refresh.jpg" style="display: inline; margin:0px 5px;box-shadow: 2px 2px 2px #999;border:1px solid #ccc;"/> at the top of the Resource Groups blade should display your new resource group.
+  6. It should only take a second for the resource group to be created.  Once you click create, the configuration panel closes and returns you to the list of available resource groups.  Your recently created group may not be visible in the list.  Clicking on **Refresh** <img src="https://raw.githubusercontent.com/AzureWorkshops/images/master/icons_refresh.jpg" class="inline"/> at the top of the Resource Groups blade should display your new resource group.
 
 **NOTE:** When you create a resource group, you are prompted to choose a location. Additionally, as you create individual resources, you will also be prompted to choose locations. The location of resource groups and their resources can be different.  This is because resource groups store _metadata_ describing their contained resources; and, due to some types of compliance that your company may adhere to, you may need to store that metadata in a different location than the resources themselves.  For example, if you are a US-based company, you may choose to keep the metadata state-side while creating resources in foreign regions to reduce latency for the end-user.
 
@@ -27,10 +27,10 @@ Now that we have an available resource group, let's create the actual Ubuntu ser
 
   1. If you are not there already, go ahead and navigate to the **azworkshops_dockerfile_ubuntu_demo** resource group.
 
-  2. At the top of the blade for our group, click on **Add** <img src="https://raw.githubusercontent.com/AzureWorkshops/images/master/icons_add.jpg" style="display: inline; margin:0px 5px;box-shadow: 2px 2px 2px #999;border:1px solid #ccc;"/>. This will display the blade for the _Azure Marketplace_ allowing you to deploy a number of different solutions.
+  2. At the top of the blade for our group, click on **Add** <img src="https://raw.githubusercontent.com/AzureWorkshops/images/master/icons_add.jpg" class="inline"/>. This will display the blade for the _Azure Marketplace_ allowing you to deploy a number of different solutions.
 
   3. We are interested in deploying an Ubuntu server. Therefore, in the _Search Everything_ box, type in **Ubuntu Server**.  This will display a couple of different versions.  Since we want to deploy the latest _stable_ version of Ubuntu, from the displayed options, choose **Ubuntu Server 16.04 LTS**.
-  <img src="../../images/ubuntu_server.jpg" style="margin:10px 0px;box-shadow: 2px 2px 2px #999;border:1px solid #ccc;"/>
+  <img src="../../images/ubuntu_server.jpg" class="block"/>
 
   4. This will display a blade providing more information about the server we have chosen. To continue creating the server, choose **Create**.
 
@@ -86,7 +86,7 @@ Once your machine has been created, we can remotely connect to it using secure s
 #### Get Public IP
   1. If it is not already open, navigate to the **Overview** blade of your newly created virtual machine.
 
-  2. In the top section of the blade, in the right column, you should see a **Public IP address** listed. <img src="../../images/ubuntu_ip_address.jpg" style="margin:10px 0px;box-shadow: 2px 2px 2px #999;border:1px solid #ccc;"/>
+  2. In the top section of the blade, in the right column, you should see a **Public IP address** listed. <img src="../../images/ubuntu_ip_address.jpg" class="block"/>
 
   3. Copy the IP address.
 
@@ -98,12 +98,12 @@ Once your machine has been created, we can remotely connect to it using secure s
       * Hostname: **_&lt;IP address from previous step&gt;_**
       * Port: **22**
       * Connection type: **SSH**   
-<img src="../../images/ubuntu_putty_configuration.jpg" style="margin:10px 0px;box-shadow: 2px 2px 2px #999;border:1px solid #ccc;"/>
+<img src="../../images/ubuntu_putty_configuration.jpg" class="block"/>
 
   3. Click **Open**
 
   4. In the security prompt, click **Yes**.  
-  <img src="../../images/putty_security.jpg" style="margin:10px 0px;box-shadow: 2px 2px 2px #999;border:1px solid #ccc;"/>
+  <img src="../../images/putty_security.jpg" class="block"/>
 
   5. You will then connect to the remote Ubuntu server.
 
