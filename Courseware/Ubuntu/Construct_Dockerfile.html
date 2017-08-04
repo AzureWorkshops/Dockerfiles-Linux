@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Construct Dockerfile - Docker Automation with Dockerfiles (Linux)</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="description" content="Azure Workshops" />
+    <meta name="author" content="Joshua Davis">
+    <link rel="icon" href="" type="image/x-icon">
+    
+    <!-- Font -->
+    
+    <!-- CSS -->
+    <link href='../../themes/azure/css/vs.css' rel='stylesheet' type='text/css'><link href='../../themes/azure/css/theme.css' rel='stylesheet' type='text/css'><link href='../../themes/azure/css/theme-white.min.css' rel='stylesheet' type='text/css'>
+</head>
+<body class="">
+
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">Azure Workshops</a>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <!--
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div id="content-wrapper" class="container-fluid">
+    <div class="row hidden-print">
+        <div class="col-md-10 col-md-offset-1 breadcrumbs">
+            <a href="../../index.html">Docker Automation with Dockerfiles (Linux)</a> / <a href="../../Courseware/Introduction.html">Courseware</a> / <a href="../../Courseware/Ubuntu/Create_Virtual_Machine.html">Ubuntu</a> / <a href="../../Courseware/Ubuntu/Construct_Dockerfile.html">Construct Dockerfile</a>        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1 hidden-print">
+            <div data-spy="affix" data-offset-top="100">
+                <!-- Navigation -->
+                <ul class='Nav'><li class='Nav__item '><a href="../../Overview.html">Overview</a></li><li class='Nav__item  has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Getting Started</a><ul class='Nav'><li class='Nav__item '><a href="../../Getting_Started/Requirements.html">Requirements</a></li><li class='Nav__item '><a href="../../Getting_Started/Azure_Registration.html">Azure Registration</a></li></ul></li><li class='Nav__item Nav__item--open has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Courseware</a><ul class='Nav'><li class='Nav__item '><a href="../../Courseware/Introduction.html">Introduction</a></li><li class='Nav__item Nav__item--open has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Ubuntu</a><ul class='Nav'><li class='Nav__item '><a href="../../Courseware/Ubuntu/Create_Virtual_Machine.html">Create Virtual Machine</a></li><li class='Nav__item '><a href="../../Courseware/Ubuntu/Install_Updates.html">Install Updates</a></li><li class='Nav__item '><a href="../../Courseware/Ubuntu/Install_Docker.html">Install Docker</a></li><li class='Nav__item '><a href="../../Courseware/Ubuntu/Install_Node.js.html">Install Node.js</a></li><li class='Nav__item '><a href="../../Courseware/Ubuntu/Download_Sample_Website.html">Download Sample Website</a></li><li class='Nav__item '><a href="../../Courseware/Ubuntu/Download_Dependencies.html">Download Dependencies</a></li><li class='Nav__item Nav__item--active'><a href="../../Courseware/Ubuntu/Construct_Dockerfile.html">Construct Dockerfile</a></li><li class='Nav__item '><a href="../../Courseware/Ubuntu/Build_Image.html">Build Image</a></li><li class='Nav__item '><a href="../../Courseware/Ubuntu/Deploy_Container.html">Deploy Container</a></li><li class='Nav__item '><a href="../../Courseware/Ubuntu/Expose_Site_in_Azure.html">Expose Site in Azure</a></li></ul></li><li class='Nav__item  has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>CentOS</a><ul class='Nav'><li class='Nav__item '><a href="../../Courseware/CentOS/Create_Virtual_Machine.html">Create Virtual Machine</a></li><li class='Nav__item '><a href="../../Courseware/CentOS/Install_Updates.html">Install Updates</a></li><li class='Nav__item '><a href="../../Courseware/CentOS/Install_Docker.html">Install Docker</a></li><li class='Nav__item '><a href="../../Courseware/CentOS/Install_Node.js.html">Install Node.js</a></li><li class='Nav__item '><a href="../../Courseware/CentOS/Download_Sample_Website.html">Download Sample Website</a></li><li class='Nav__item '><a href="../../Courseware/CentOS/Download_Dependencies.html">Download Dependencies</a></li><li class='Nav__item '><a href="../../Courseware/CentOS/Construct_Dockerfile.html">Construct Dockerfile</a></li><li class='Nav__item '><a href="../../Courseware/CentOS/Build_Image.html">Build Image</a></li><li class='Nav__item '><a href="../../Courseware/CentOS/Deploy_Container.html">Deploy Container</a></li><li class='Nav__item '><a href="../../Courseware/CentOS/Expose_Site_in_Azure.html">Expose Site in Azure</a></li></ul></li></ul></li></ul>
+                <div class="Links">
+                    
+                    <div class="pdf-link">
+                        <hr />
+                        <a href="../../pdf/Docker Automation with Dockerfiles (Linux).pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span>Download PDF</span></a>
+                    </div>
+
+                                            <hr/>
+                        <div class="Twitter">
+                                                            <iframe allowtransparency="true" frameborder="0" scrolling="no" style="width:162px; height:20px;" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=azureworkshops&amp;show_count=false"></iframe>
+                                <br />
+                                <br />
+                                                    </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <article class="Page">
+    <div class="pageHeader">
+        <h1>Construct Dockerfile</h1>
+                    <div class="date"> Friday, August 4, 2017 4:52 PM</div>
+            </div>
+    <div class="copy">
+        <h2 id="page_Overview">Overview</h2>
+<p>Based on most of the previous steps, we are ready to build our Dockerfile.  We will mimic those steps for automating our image construction.</p>
+<h2 id="page_Review">Review</h2>
+<p>In preparation of writing our Dockerfile, let's review all the steps we've performed up to this point.</p>
+<ol>
+<li>Install the latest version of Ubuntu</li>
+<li>Update the package references</li>
+<li>Install the latest packages</li>
+<li>Install and configure Docker</li>
+<li>Install Node.js</li>
+<li>Install Node Package Manager (NPM)</li>
+<li>Download (clone) the sample website</li>
+<li>Download website dependencies</li>
+<li>Run the web server</li>
+</ol>
+<p>As a reminder, since we are constructing an image, we can <strong>ignore</strong> step 4.  We won't need Docker installed inside of the image.</p>
+<h2 id="page_Create-the-Dockerfile">Create the Dockerfile</h2>
+<p>Let's go ahead and create the Dockerfile contents.  We'll then examine each line below.</p>
+<ol>
+<li>
+<p>Return to your home folder by typing at the terminal prompt, <code>cd ~</code>.</p>
+</li>
+<li>
+<p>Create a Dockerfile using the <code>nano</code> text editor by typing the following: <code>nano Dockerfile</code>.  Nano is reminiscent of the old DOS editor.  Of course, you can you <code>vim</code> instead if you are comfortable in doing so.<br />
+<strong>NOTE</strong> 'Dockerfile' is case-sensitive.</p>
+</li>
+<li>
+<p>Enter the following without the line numbers. The line numbers are provided for reference below.</p>
+</li>
+</ol>
+<pre><code class="language-bash">1   FROM ubuntu:latest
+2   MAINTAINER Your Name &lt;you@yourcompany.com&gt;
+3
+4   RUN apt-get update
+5   RUN apt-get upgrade
+6   RUN apt-get install -y nodejs
+7   RUN apt-get install -y npm
+8   RUN ln -s /usr/bin/nodejs /usr/bin/node
+9   RUN apt-get install -y git
+10
+11  RUN git clone https://github.com/AzureWorkshops/samples-simple-nodejs-website.git /var/www
+12  WORKDIR /var/www
+13  RUN npm i
+14
+15  EXPOSE 8080
+16
+17  CMD node /var/www/index.js
+</code></pre>
+<ol start="4">
+<li>
+<p>To save, <strong>Ctrl+O</strong></p>
+</li>
+<li>
+<p>To exit, <strong>Ctrl+X</strong></p>
+</li>
+</ol>
+<h4 id="page_Explanation">Explanation</h4>
+<p>First, if you remember from the previous steps, we prepended each command with <code>sudo</code> to allow the command to be executed with elevated privileges.  By default, all Docker images execute under the identity of the built-in superuser account <code>root</code>.  Therefore, we can omit the <code>sudo</code>.</p>
+<p><strong>Line 1:</strong> Specifies the base image, including the tag, with which we're starting. In our case, we are using the minimal Ubuntu OS as the base image.</p>
+<p><strong>Line 2:</strong> Specifies the owner of the image with their email address.</p>
+<p><strong>Lines 4-8:</strong> The commands we executed earlier in this workshop that update the system and installs Node.js.</p>
+<p><strong>Line 9:</strong> We were not required to install <code>git</code> in our virtual machine. However, because the base image of Ubuntu doesn't include <code>git</code> by default, we need to install it manually.</p>
+<p><strong>Line 11:</strong> Downloads (clones) the sample website into the <code>/var/www</code> local folder.</p>
+<p><strong>Line 12:</strong> <code>WORKDIR</code> is how you change the current directory (compared to <code>cd</code>) in a Dockerfile. We are changing to the website home directory.</p>
+<p><strong>Line 13:</strong> Install the website's dependencies.</p>
+<p><strong>Line 15:</strong> Our website server is programmed to use port 8080.  Therefore, similar to a firewall in the image, we open, or <em>expose</em>, the port to the outside host.  We will bind to this open port later when we run a container based on this image.</p>
+<p><strong>Line 17:</strong> This starts our web server.  We could have used the <code>RUN</code> directive, but the <code>CMD</code> directive is designed to execute our long-running process.  While, technically, we could have multiple <code>CMD</code> lines in the Dockerfile, the Docker build will ignore all <code>CMD</code> lines except the last one.</p>
+<p>That's it! That's all there is to creating a Dockerfile.</p>
+    </div>
+
+            <nav class="hidden-print">
+            <ul class="pager">
+                                    <li class=pager-prev><a href="../../Courseware/Ubuntu/Download_Dependencies.html">Previous</a></li>
+                                                    <li class=pager-next><a href="../../Courseware/Ubuntu/Build_Image.html">Next</a></li>            </ul>
+        </nav>
+    </article>
+        </div>
+        <div class="col-md-2 hidden-print">
+            <div class="article-links" data-spy="affix" data-offset-top="100">
+                <strong>In this article</strong><ol><li><a href="#page_Overview">Overview</a></li><li><a href="#page_Review">Review</a></li><li><a href="#page_Create-the-Dockerfile">Create the Dockerfile</a></li></ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="footer" class="container-fluid hidden-print">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-1">
+            
+            </div>
+            <div class="col-md-8" style="text-align:right;">
+            This work is licensed under a Creative Commons Attribution 4.0 International License.
+            </div>
+        </div>
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- JS -->
+    
+    <script src="../../themes/azure/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="../../themes/azure/js/theme.js"></script>
+
+</body>
+</html>
